@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Ganora';
+  src: url('./fonts/GanoraRegular.woff2') format('woff2'),
+    url('./fonts/GanoraRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('./fonts/icomoon.eot?qme1j9');
+  src: url('./fonts/icomoon.eot?qme1j9#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?qme1j9') format('truetype'),
+    url('./fonts/icomoon.woff?qme1j9') format('woff'),
+    url('./fonts/icomoon.svg?qme1j9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-right-arrow:before {
+  content: "\e900";
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: #181818;
+}
+
+p {
+  font-size: 1rem;
+  color: #AAAAAA;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 3.75rem;
+  line-height: 80px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Ganora';
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 54px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Ganora';
+}
+
+.row-gap-20 {
+  row-gap: 30px;
+}
+
+.btn-theme {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-theme::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url('/top-pattern.svg');
+  background-size: auto;
+  background-position: center;
+  height: 8px;
+  opacity: 0;
+  transition: 0.4s all;
+  transform: translateX(-30px);
+}
+
+.btn-theme::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: url('/bottom-pattern.svg');
+  background-size: auto;
+  background-position: center;
+  height: 8px;
+  opacity: 0;
+  transition: 0.4s all;
+  transform: translateX(30px);
+}
+
+.btn-theme:hover {
+  background-color: #9C7339;
+  color: #FFFFFF;
+}
+
+.btn-theme i {
+  transition: 0.4s all;
+  display: inline-block;
+
+}
+
+.btn-theme:hover i {
+  transform: rotate(-45deg);
+}
+
+.btn-theme:hover::before {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.btn-theme:hover::after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.page-header {
+  padding: 60px 0;
+}
+
+.page-header h1 {
+  font-size: 8.75rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-family: 'Ganora';
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 767px) {
+
+  .page-header h1 {
+    font-size: 6rem;
+  }
+}
+
+
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1170px;
+  }
+}
